@@ -9,6 +9,7 @@ ESP32 で SDカード内のファイルをPOSTするサンプルコード
 Adafruit ESP32 Feather と マイクロＳＤカードスロットＤＩＰ化キット を SPI接続する  
 
 |--|ESP32||SDカード|  
+|:--:|:--:|:-:|  
 |SPI_SCL|5|2|  
 |SPI_MISO|19|7|  
 |SPI_MOSI|18|3|  
