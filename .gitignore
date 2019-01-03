@@ -78,3 +78,4 @@ typings/
 
 server/uploads/
 
+.pioenvs/
