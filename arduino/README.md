@@ -19,6 +19,6 @@ Adafruit ESP32 Feather と マイクロＳＤカードスロットＤＩＰ化�
 
 # 開発環境
 [PlatformIO IDE for VSCode](https://docs.platformio.org/en/latest/ide/vscode.html#installation)   
-環境でビルドとESP32へ書き込みができるのでリンクを参考にインストールする。
+環境でビルドとESP32へ書き込みができるのでリンクを参考にインストールする。
 
 
