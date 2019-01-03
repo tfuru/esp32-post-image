@@ -1,21 +1,19 @@
 #include "ImagePost.h"
-#include <SD.h>
 
 ImagePost::ImagePost(void){
 
 }
 
-bool ImagePost::postImage(const char* path, FUNC_POST_IMAGE_CALLBACK callback){
+bool ImagePost::postImage(File *file, FUNC_POST_IMAGE_CALLBACK callback){
 #ifdef IMAGE_POST_DEBUG  
     Serial.println(F("postImage"));
 #endif
-    String response = "";
-    File file = SD.open(path, FILE_READ);
-    if (!file){
+    String response = "";    
+    if(file == nullptr){
         Serial.println(F("Failed to open file for writing"));
         return false;
     }
-    int fileSize = file.size();
+    int fileSize = file->size();
 
     char contentType[100];
     char boundary[32] = "--";
@@ -39,7 +37,7 @@ bool ImagePost::postImage(const char* path, FUNC_POST_IMAGE_CALLBACK callback){
     sprintf(payloadHeader,
                 payloadHeaderFormat.c_str(),
                 boundary,
-                file.name());
+                file->name());
 
     char payloadFooter[50] = {0};
     sprintf(payloadFooter, "\r\n--%s--\r\n", boundary);
@@ -77,8 +75,8 @@ bool ImagePost::postImage(const char* path, FUNC_POST_IMAGE_CALLBACK callback){
         Serial.println(F("write --"));
 #endif        
         size_t w = 0;
-        while (file.available()) {
-            w += client.write(file.read());            
+        while (file->available()) {
+            w += client.write(file->read());            
             if((w % API_POST_IMAGE_FLASH_SIZE) == 0){
                 client.flush();
             }
@@ -119,7 +117,6 @@ bool ImagePost::postImage(const char* path, FUNC_POST_IMAGE_CALLBACK callback){
         }
         client.stop();        
     }
-    file.close();
     //コールバック
     callback(response.c_str());
     return true;

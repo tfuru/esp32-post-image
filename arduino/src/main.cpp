@@ -38,5 +38,7 @@ void loop() {
 
   //SD内の画像 0.jpg をPOST
   void (*callback)(const char *result) = imagePostCallback;
-  imagePost.postImage("/0.jpg", callback);
+  File file = SD.open("/0.jpg", FILE_READ);
+  imagePost.postImage(&file, callback);
+  file.close();
 }

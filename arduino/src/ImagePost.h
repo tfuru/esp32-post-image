@@ -4,13 +4,14 @@
 #include "config.h"
 #include <Arduino.h> 
 #include <HTTPClient.h>
+#include <SD.h>
 
 typedef void (* FUNC_POST_IMAGE_CALLBACK)(const char *response); 
 
 class ImagePost{
     public:
         ImagePost(void);
-        bool postImage(const char* path,FUNC_POST_IMAGE_CALLBACK callback);
+        bool postImage(File *file,FUNC_POST_IMAGE_CALLBACK callback);
     private:
         WiFiClient client;
 };

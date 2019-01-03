@@ -21,4 +21,10 @@ Adafruit ESP32 Feather と マイクロＳＤカードスロットＤＩＰ化�
 [PlatformIO IDE for VSCode](https://docs.platformio.org/en/latest/ide/vscode.html#installation)   
 環境でビルドとESP32へ書き込みができるのでリンクを参考にインストールする。
 
+# 画像受け取りサーバ
+server ディレクトリで `node app.js` を実行する
 
+```
+$node app.js 
+Example app listening at http://192.168.100.140:8080
+```

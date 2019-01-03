@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-//#define IMAGE_POST_DEBUG 
+#define IMAGE_POST_DEBUG 
 
 #define WIFI_SSID "W03_F0434732EAC2"
 #define WIFI_PASSWORD "rqnfqy85e32deqn"
