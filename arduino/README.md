@@ -11,11 +11,11 @@ Adafruit ESP32 Feather と マイクロＳＤカードスロットＤＩＰ化�
 |--|ESP32|SDカード|  
 |:--:|:--:|:-:|  
 |SPI_SCL|5|2|  
-|SPI_MISO|19|7|  
 |SPI_MOSI|18|3|  
-|SPI_CS_SD|16|5|
 |3V3|--|4|
+|SPI_CS_SD|16|5|
 |GND|--|6|
+|SPI_MISO|19|7|  
 
 # 開発環境
 [PlatformIO IDE for VSCode](https://docs.platformio.org/en/latest/ide/vscode.html#installation)   
