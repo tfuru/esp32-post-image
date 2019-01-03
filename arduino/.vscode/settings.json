@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.osx": {
+        "PATH": "/Users/nobuyukifurukawa/.platformio/penv/bin:/Users/nobuyukifurukawa/.platformio/penv:/Users/nobuyukifurukawa/google-cloud-sdk/bin:/usr/local/bin/pcb2gcodeGUI.app/Contents/MacOS/:/Users/nobuyukifurukawa/.nodebrew/current/bin:/usr/local/opt/qt/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nobuyukifurukawa/Library/Android/sdk/platform-tools",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}
